@@ -2,7 +2,9 @@
 const {sum} = require('./operations')
 
 //TODO: uncomment the next line
-//const {subtract} = require('./operations')
+const {subtract} = require('./operations')
+
+const {division} = require('./operations')
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3)
@@ -26,4 +28,16 @@ test('subtracts 10 - 10 to equal 0', () => {
 
 test('subtracts -1 - (-2) to equal 1', () => {
     expect(subtract(-1, -2)).toBe(1)
+});
+
+test('divides 1 / 1 to equal 1', () => {
+    expect(division(1, 1)).toBe(1)
+});
+
+test('divides 1 / 0 to equal 0', () => {
+    expect(division(0, 0)).toBe(0)
+});
+
+test('divides 4 / 2 to equal 2', () => {
+    expect(division(4, 2)).toBe(2)
 });
